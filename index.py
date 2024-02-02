@@ -22,7 +22,18 @@ from PyQt5 import uic
 
 from PIL import Image
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/maria/Downloads/identifytext-387022-636ef47771a2.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/Users/maria/Downloads/identifytext-387022-636ef47771a2.json" # My file of Service Account at Project with GenerativeAI enable
+
+# link of Linkedin video https://www.linkedin.com/events/7158924618618089475/theater
+# link of Youtube video https://youtube.com/live/Hsdz3F-JjVU
+# link of Github code https://github.com/marianoaloi/GeminiDemo
+
+# Create your virtual environment python -m venv venv
+# Activate your virtual environment venv/Scripts/activate.bat (Windows like the live) or venv/bin/activate (Linux)
+# install libraries pip install -r requirements.txt
+
+# You neeed create a GCP project , enable the generativelibrary in your project , create a user account , dowload the user account key, setup the user account key file to link the environment variable "GOOGLE_APPLICATION_CREDENTIALS"
+# At lest go to https://makersuite.google.com/app/prompts/new_freeform and create your API key access that you will put in the environment variable KEY_GEMENI
 
 class Util:
     def convertMillis(millis:int):
@@ -93,7 +104,7 @@ class GeminiDemo(QMainWindow):
         if(ret):
             self.actualImageQuestion = Image.fromarray(frame,"RGB")
             self.actualImageQuestion.save(self.filePathVideo.text()+".jpg")
-            
+
         try:
             question="How is the correct answer? How is the Question number? How is the total of questions? Return the text you can read. If you can , please, explain why the answer is correct."
             response = self.model.generate_content([question,self.actualImageQuestion])
