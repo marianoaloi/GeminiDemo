@@ -9,11 +9,5 @@ See the explain video in [Linkedin](https://www.linkedin.com/events/715892461861
 
 # Gemma Demo
 
-@misc{data-assistants-with-gemma,
-    author = {Paul Mooney, Ashley Chow},
-    title = {Google – AI Assistants for Data Tasks with Gemma},
-    publisher = {Kaggle},
-    year = {2024},
-    url = {https://kaggle.com/competitions/data-assistants-with-gemma}
-}
+Paul Mooney, Ashley Chow. (2024). Google – AI Assistants for Data Tasks with Gemma. Kaggle. https://kaggle.com/competitions/data-assistants-with-gemma
 
