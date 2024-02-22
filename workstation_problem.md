@@ -2,13 +2,13 @@ In my workstation using a RTX 2060 12GB, and JAX .
 
 The line 
 
-'''
+```
 gemma_lm = keras_nlp.models.GemmaCausalLM.from_preset("gemma_2b_en")
-'''
+```
 
 finish with error 
 
-'''
+```
 Traceback (most recent call last):
   File "/opt/maloi/ml/Gemma_KerasNLP/index.py", line 12, in <module>
     gemma_lm = keras_nlp.models.GemmaCausalLM.from_preset("gemma_2b_en")
@@ -25,4 +25,4 @@ Traceback (most recent call last):
   [my venv]/keras_nlp/src/layers/modeling/reversible_embedding.py", line 144, in load_own_variables
     self.embeddings.assign(store["0"])
 KeyError: '0'
-'''
+```
